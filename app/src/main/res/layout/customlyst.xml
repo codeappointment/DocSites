@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_5sdp">
+            <TextView
+                android:id="@+id/ImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_3sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_toStartOf="@+id/copy"
+                android:layout_below="@+id/idTitle"
+                android:alpha=".7"
+                android:background="@drawable/download_button"
+                android:padding="@dimen/_7sdp"
+                android:text="Share"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/_10sdp" />
+
+            <TextView
+                android:id="@+id/idTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/_10sdp"
+                android:paddingStart="@dimen/_5sdp"
+                android:paddingEnd="@dimen/_3sdp"
+                android:paddingTop="@dimen/_10sdp"
+                android:text="Text"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#353433" />
+
+            <TextView
+                android:id="@+id/copy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/idTitle"
+                android:layout_marginBottom="@dimen/_3sdp"
+                android:alpha=".7"
+                android:background="@drawable/download_button"
+                android:padding="7dp"
+                android:text="Copy link"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/_10sdp" />
+
+</RelativeLayout>
+

@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/reply_preview_background"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/settingHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="#ffffff"
+                android:gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/notification"
+                android:textColor="#123456"
+                android:textSize="@dimen/_25sdp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/bsmmu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/settingHeading"
+                android:layout_marginBottom="@dimen/_6sdp"
+                android:layout_marginLeft="@dimen/_3sdp"
+                android:layout_marginRight="@dimen/_3sdp"
+                app:cardCornerRadius="@dimen/_5sdp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/_15sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:text="BSMMU"
+                        android:textColor="#00a2ff"
+                        android:textSize="@dimen/_20sdp" />
+
+                    <CheckBox
+                        android:id="@+id/residencySetting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_30sdp"
+                        android:checked="true"
+                        android:padding="@dimen/_10sdp"
+                        android:text="@string/residencySetting"
+                        android:textSize="16sp" />
+
+                    <CheckBox
+                        android:id="@+id/noticeSetting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/residencySetting"
+                        android:checked="true"
+                        android:padding="@dimen/_10sdp"
+                        android:text="@string/noticeSetting"
+                        android:textSize="@dimen/_16sdp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/dghsHolder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bsmmu"
+                android:layout_marginBottom="@dimen/_6sdp"
+                android:layout_marginLeft="@dimen/_3sdp"
+                android:layout_marginRight="@dimen/_3sdp"
+                app:cardCornerRadius="@dimen/_5sdp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/_15sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:text="DGHS"
+                        android:textColor="#00a2ff"
+                        android:textSize="@dimen/_20sdp" />
+
+                    <CheckBox
+                        android:id="@+id/DGHSSetting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_30sdp"
+                        android:checked="true"
+                        android:padding="@dimen/_10sdp"
+                        android:text="@string/dghsSetting"
+                        android:textSize="@dimen/_16sdp" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/ccdHolder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dghsHolder"
+                android:layout_marginBottom="@dimen/_6sdp"
+                android:layout_marginLeft="@dimen/_3sdp"
+                android:layout_marginRight="@dimen/_3sdp"
+                app:cardCornerRadius="@dimen/_5sdp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/_15sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:text="CCD"
+                        android:textColor="#00a2ff"
+                        android:textSize="@dimen/_20sdp" />
+
+                    <CheckBox
+                        android:id="@+id/ccdSetting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_30sdp"
+                        android:checked="true"
+                        android:padding="@dimen/_10sdp"
+                        android:text="@string/ccdSetting"
+                        android:textSize="@dimen/_16sdp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/bpscHolder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ccdHolder"
+                android:layout_marginBottom="@dimen/_6sdp"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:layout_marginEnd="@dimen/_3sdp"
+                app:cardCornerRadius="@dimen/_5sdp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/_15sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:text="BPSC"
+                        android:textColor="#00a2ff"
+                        android:textSize="@dimen/_20sdp" />
+
+                    <CheckBox
+                        android:id="@+id/bcsResultSetting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:checked="true"
+                        android:padding="@dimen/_10sdp"
+                        android:text="@string/resultBcsSetting"
+                        android:textSize="@dimen/_16sdp" />
+
+                    <CheckBox
+                        android:id="@+id/regiDeptSetting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/bcsResultSetting"
+                        android:checked="true"
+                        android:padding="@dimen/_10sdp"
+                        android:text="@string/regiDeptSetting"
+                        android:textSize="@dimen/_16sdp" />
+
+                    <CheckBox
+                        android:id="@+id/deptResultSetting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/regiDeptSetting"
+                        android:checked="true"
+                        android:padding="@dimen/_10sdp"
+                        android:text="@string/resultDeptSetting"
+                        android:textSize="@dimen/_16sdp" />
+
+                    <CheckBox
+                        android:id="@+id/regiSeniorSetting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/deptResultSetting"
+                        android:checked="true"
+                        android:padding="@dimen/_10sdp"
+                        android:text="@string/regiSeniorSetting"
+                        android:textSize="@dimen/_16sdp" />
+
+                    <CheckBox
+                        android:id="@+id/seniorResultSetting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/regiSeniorSetting"
+                        android:checked="true"
+                        android:padding="@dimen/_10sdp"
+                        android:text="@string/resultSeniorSetting"
+                        android:textSize="@dimen/_16sdp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mohfHolder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bpscHolder"
+                android:layout_marginBottom="@dimen/_6sdp"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:layout_marginEnd="@dimen/_3sdp"
+                app:cardCornerRadius="@dimen/_5sdp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/_15sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:text="MOHFW"
+                        android:textColor="#00a2ff"
+                        android:textSize="@dimen/_20sdp" />
+
+                    <CheckBox
+                        android:id="@+id/assistantSurgeonSetting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_30sdp"
+                        android:checked="true"
+                        android:padding="@dimen/_10sdp"
+                        android:text="@string/assistantSurgeonSetting"
+                        android:textSize="@dimen/_16sdp" />
+
+                    <CheckBox
+                        android:id="@+id/deputationSetting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/assistantSurgeonSetting"
+                        android:checked="true"
+                        android:padding="@dimen/_10sdp"
+                        android:text="@string/deputationOrders"
+                        android:textSize="@dimen/_16sdp" />
+
+                    <CheckBox
+                        android:id="@+id/juniorConsultantSetting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/deputationSetting"
+                        android:checked="true"
+                        android:padding="@dimen/_10sdp"
+                        android:text="@string/juniorConsultantSetting"
+                        android:textSize="@dimen/_16sdp" />
+
+                    <CheckBox
+                        android:id="@+id/seniorConsultantSetting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/juniorConsultantSetting"
+                        android:checked="true"
+                        android:padding="@dimen/_10sdp"
+                        android:text="@string/seniorConsultantSetting"
+                        android:textSize="@dimen/_16sdp" />
+
+                    <CheckBox
+                        android:id="@+id/assistantProfessorSetting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/seniorConsultantSetting"
+                        android:checked="true"
+                        android:padding="@dimen/_10sdp"
+                        android:text="@string/assistantProfessorSetting"
+                        android:textSize="@dimen/_16sdp" />
+
+                    <CheckBox
+                        android:id="@+id/associateProfessorSetting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/assistantProfessorSetting"
+                        android:checked="true"
+                        android:padding="@dimen/_10sdp"
+                        android:text="@string/associateProfessorSetting"
+                        android:textSize="@dimen/_16sdp" />
+
+                    <CheckBox
+                        android:id="@+id/professorSetting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/associateProfessorSetting"
+                        android:checked="true"
+                        android:padding="@dimen/_10sdp"
+                        android:text="@string/professorSetting"
+                        android:textSize="@dimen/_16sdp" />
+
+                    <CheckBox
+                        android:id="@+id/civilSergeonSetting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/professorSetting"
+                        android:checked="true"
+                        android:padding="@dimen/_10sdp"
+                        android:text="@string/civilSurgeonSetting"
+                        android:textSize="@dimen/_16sdp" />
+
+                    <CheckBox
+                        android:id="@+id/adhocSetting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/civilSergeonSetting"
+                        android:checked="true"
+                        android:padding="@dimen/_10sdp"
+                        android:text="@string/adhocSetting"
+                        android:textSize="@dimen/_16sdp" />
+
+                    <CheckBox
+                        android:id="@+id/mohfwSetting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/adhocSetting"
+                        android:checked="true"
+                        android:padding="@dimen/_10sdp"
+                        android:text="@string/mohfwSetting"
+                        android:textSize="@dimen/_16sdp" />
+
+                    <CheckBox
+                        android:id="@+id/leaveSetting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/mohfwSetting"
+                        android:checked="true"
+                        android:padding="@dimen/_10sdp"
+                        android:text="@string/leaveSetting"
+                        android:textSize="@dimen/_16sdp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mofpHolder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mohfHolder"
+                android:layout_marginBottom="@dimen/_6sdp"
+                android:layout_marginLeft="@dimen/_3sdp"
+                android:layout_marginRight="@dimen/_3sdp"
+                app:cardCornerRadius="@dimen/_5sdp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/_15sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:text="DGFP"
+                        android:textColor="#00a2ff"
+                        android:textSize="@dimen/_20sdp" />
+
+                    <CheckBox
+                        android:id="@+id/dgfpSetting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_30sdp"
+                        android:checked="true"
+                        android:padding="@dimen/_10sdp"
+                        android:text="@string/dgfpSetting"
+                        android:textSize="@dimen/_16sdp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/deselect"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:alpha=".8"
+        android:background="@drawable/download_button"
+        android:gravity="center"
+        android:padding="@dimen/_7sdp"
+        android:text="@string/select"
+        android:textColor="#1EFFF0"
+        android:textSize="@dimen/_16sdp" />
+
+    <TextView
+        android:id="@+id/deselect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="@dimen/_60sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:alpha=".8"
+        android:background="@drawable/download_button"
+        android:gravity="center"
+        android:padding="@dimen/_7sdp"
+        android:text="@string/deselect"
+        android:textColor="#FC0E00"
+        android:textSize="@dimen/_16sdp" />
+</RelativeLayout>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <GridView
+        android:id="@+id/grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/notification_layer"
+        android:numColumns="2"
+        android:scrollbars="none" />
+
+    <TextView
+        android:id="@+id/notification_layer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_27sdp"
+        android:background="#101010" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:id="@+id/facebookupdateNotifier"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/profile"
+            android:textColor="#FC0E00"
+            ads:layout_constraintStart_toStartOf="parent"
+            ads:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/facebooknotificationCount"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:visibility="invisible"
+            android:background="@drawable/bcps"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textSize="@dimen/_9sdp"
+            ads:layout_constraintEnd_toEndOf="parent"
+            ads:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:src="@drawable/ic_launcher_foreground"
+        android:contentDescription="@string/close" />
+
+    <TextView
+        android:id="@+id/version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_toEndOf="@+id/icon"
+        android:paddingStart="@dimen/_5sdp"
+        android:paddingEnd="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:textSize="@dimen/_12sdp"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/updateNotifier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/notification_layer"
+        android:layout_centerInParent="true"
+        android:alpha=".8"
+        android:textSize="@dimen/_10sdp"
+        android:background="@drawable/notify_forum"
+        android:padding="@dimen/_3sdp"
+        android:textColor="#FC0E00" />
+
+
+    <ImageButton
+        android:id="@+id/notificationSumery"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="@dimen/_12sdp"
+        android:alpha=".85"
+        android:background="@drawable/bpsc_govt"
+        android:src="@drawable/notification"
+        android:contentDescription="@string/bmdc" />
+
+    <Button
+        android:id="@+id/notificationCount"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/bcps"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/_12sdp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/forum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/_40sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:src="@drawable/messenger_bubble_large_white" />
+
+    <TextView
+        android:id="@+id/forumhelpNotify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/forum"
+        android:layout_toStartOf="@+id/forum"
+        android:layout_marginTop="@dimen/_11sdp"
+        android:alpha=".8"
+        android:background="@drawable/notify_forum"
+        android:padding="@dimen/_3sdp"
+        android:textColor="#00a2ff"
+        android:textSize="@dimen/_10sdp"/>
+
+    <io.github.yavski.fabspeeddial.FabSpeedDial
+        android:id="@+id/fabs"
+        ads:fabBackgroundTint="#FF0D00"
+        ads:fabGravity="bottom_end"
+        ads:fabMenu="@menu/menu"
+        ads:miniFabBackgroundTint="#000000"
+        ads:miniFabBackgroundTintList="@array/menu_background_color"
+        ads:miniFabDrawableTint="#FFFFFF"
+        ads:miniFabTitleBackgroundTint="#ffffff"
+        ads:miniFabTitleTextColor="#050505"
+        ads:miniFabTitleTextColorList="@array/menu_text_color"
+        ads:miniFabTitlesEnabled="true"
+        ads:touchGuard="true"
+        ads:touchGuardDrawable="@drawable/touch_guard_transparent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/forum"/>
+</RelativeLayout>

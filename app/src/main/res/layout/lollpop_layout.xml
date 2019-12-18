@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lollipoop"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_5sdp"
+    android:background="#dadada"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/lollipopcardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:orientation="vertical">
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/user_image"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                app:civ_border_color="#123456"
+                app:civ_border_width="0.2dp" />
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_toEndOf="@+id/user_image"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+                android:textColor="#000099"
+                android:textSize="@dimen/_20sdp"
+                android:textStyle="bold"
+                tools:text="User name" />
+
+            <TextView
+                android:id="@+id/lollipopvarified"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_toEndOf="@+id/user_name"
+                android:background="@mipmap/varified"
+                android:padding="@dimen/_2sdp"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+                android:textColor="#000099"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/delete_post"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/user_text"
+                android:layout_alignParentEnd="true"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/close" />
+
+            <TextView
+                android:id="@+id/user_text"
+                android:padding="@dimen/_3sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/time"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:autoLink="all"
+                android:text="User text"
+                android:textColor="#000000"
+                android:textSize="@dimen/_17sdp"
+                android:textStyle="bold" />
+
+            <ProgressBar
+                android:id="@+id/lollipop_layout_progressbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_text"
+                android:layout_centerInParent="true" />
+
+            <ImageView
+                android:id="@+id/postImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_text"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:contentDescription="@string/close" />
+
+            <LinearLayout
+                android:id="@+id/seperator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/postImage"
+                android:background="#DFDFDF"
+                android:orientation="vertical"
+                android:padding=".2dp" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_name"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_toEndOf="@+id/user_image"
+                android:textColor="#916E00"
+                tools:text="time" />
+
+            <TextView
+                android:id="@+id/report"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/seperator"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:padding="@dimen/_10sdp"
+                android:text="Report"
+                android:textColor="#FC0E00" />
+
+            <TextView
+                android:id="@+id/reply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/seperator"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:padding="@dimen/_10sdp"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:text="Reply"
+                android:textColor="#990000" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lollipopcardview"
+        android:padding="@dimen/_1sdp" />
+</RelativeLayout>

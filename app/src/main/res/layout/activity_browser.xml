@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:mlns="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    mlns:ads="http://schemas.android.com/apk/res-auto">
+
+    <ProgressBar
+        android:id="@+id/progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:progressDrawable="@drawable/custom_progress" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <WebView
+            android:id="@+id/WebView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <Button
+            android:id="@+id/downloadButton"
+            android:padding="10dp"
+            android:textColor="#FFFFFF"
+            android:layout_centerInParent="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="55dp"
+            android:text="@string/download"
+            android:alpha="0.70"
+            android:background="@drawable/download_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <io.github.yavski.fabspeeddial.FabSpeedDial
+            android:id="@+id/fabweb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="80dp"
+            ads:fabGravity="bottom_end"
+            ads:fabBackgroundTint="#0066FF"
+            ads:fabMenu="@menu/browser_menu"
+            ads:miniFabBackgroundTint="#000000"
+            ads:miniFabDrawableTint="#FFFFFF"
+            ads:miniFabTitleBackgroundTint="#000000"
+            ads:miniFabTitleTextColor="#FFFFFF"
+            ads:touchGuard="true"
+            ads:touchGuardDrawable="@drawable/touch_guard_transparent" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/forum_layouts"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_5sdp"
+    android:background="#dadada"
+    android:orientation="vertical"
+    android:layout_marginBottom="@dimen/_1sdp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:orientation="vertical">
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/user_image"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                app:civ_border_color="#123456"
+                app:civ_border_width="0.2dp" />
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_toEndOf="@+id/user_image"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+                android:textColor="#000099"
+                android:textSize="@dimen/_18sdp"
+                android:textStyle="bold"
+                tools:text="User name" />
+
+            <TextView
+                android:id="@+id/varified"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_toEndOf="@+id/user_name"
+                android:background="@mipmap/varified"
+                android:padding="@dimen/_2sdp"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+                android:textColor="#000099"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/delete_post"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/user_text"
+                android:layout_alignParentEnd="true"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/close" />
+
+            <TextView
+                android:id="@+id/user_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/time"
+                android:padding="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:autoLink="all"
+                android:textColor="#000000"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold"
+                tools:text="User text" />
+
+            <LinearLayout
+                android:id="@+id/seperator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/postImage"
+                android:background="#DFDFDF"
+                android:orientation="vertical"
+                android:padding=".2dp" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_name"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_toEndOf="@+id/user_image"
+                android:textColor="#916E00"
+                tools:text="time" />
+
+            <TextView
+                android:id="@+id/block"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/seperator"
+                android:layout_marginTop="4dp"
+                android:layout_toEndOf= "@+id/report"
+                android:padding="@dimen/_10sdp"
+                android:text="🚫"
+                android:textColor="#FC0E00" />
+
+            <TextView
+                android:id="@+id/report"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/seperator"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:padding="@dimen/_10sdp"
+                android:text="Report"
+                android:textColor="#FC0E00" />
+
+            <TextView
+                android:id="@+id/comment_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/seperator"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:padding="@dimen/_10sdp"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:textColor="#990000"
+                tools:text="comment count" />
+
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/reply_preview_image"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_below="@+id/comment_count"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_3sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                app:civ_border_color="#123456"
+                app:civ_border_width="0.2dp" />
+
+            <ProgressBar
+                android:id="@+id/forum_layout_progressbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_text"
+                android:layout_centerInParent="true" />
+
+            <ImageView
+                android:id="@+id/postImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_text"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:contentDescription="@string/Notify_server" />
+
+            <RelativeLayout
+                android:id="@+id/preview_holder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/comment_count"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:paddingEnd="@dimen/_5sdp"
+                android:paddingStart="@dimen/_5sdp"
+                android:layout_toEndOf="@+id/reply_preview_image"
+                android:background="@drawable/reply_preview_background"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/reply_preview_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:textColor="#000099"
+                    android:textSize="@dimen/_15sdp"
+                    tools:text="Name" />
+
+                <TextView
+                    android:id="@+id/varified_reply"
+                    android:layout_width="@dimen/_12sdp"
+                    android:layout_height="@dimen/_12sdp"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:layout_toEndOf="@+id/reply_preview_name"
+                    android:background="@mipmap/varified2"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+                    android:textColor="#000099"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/reply_preview_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/reply_preview_name"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:textSize="@dimen/_13sdp"
+                    android:textColor="#222222"
+                    tools:text="Reply" />
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/replyImageHolder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/preview_holder"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                app:cardCornerRadius="@dimen/_8sdp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/replyImage"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/close" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
