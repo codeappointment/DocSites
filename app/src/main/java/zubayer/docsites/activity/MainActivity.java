@@ -1479,13 +1479,7 @@ public class MainActivity extends Activity {
         paramTagForText = "#system h1 a";
         paramLink = "abs:href";
         textMin = 0;
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                dghsParser.execute();
-            }
-        },0);
-
+        dghsParser.execute();
         progressBar.setVisibility(View.VISIBLE);
     }
 
@@ -1495,12 +1489,7 @@ public class MainActivity extends Activity {
         paramTagForText = "#system li a";
         paramLink = "abs:href";
         textMin = 0;
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                dghsParser2.execute();
-            }
-        },0);
+        dghsParser2.execute();
         progressBar.setVisibility(View.VISIBLE);
     }
 
@@ -1511,12 +1500,7 @@ public class MainActivity extends Activity {
         paramTagForLink = "#system a";
         paramLink = "abs:href";
         textMin = 0;
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                dghsParser3.execute();
-            }
-        },0);
+        dghsParser3.execute();
         progressBar.setVisibility(View.VISIBLE);
     }
 
