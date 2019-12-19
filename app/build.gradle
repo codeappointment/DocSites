@@ -8,8 +8,8 @@ android {
         applicationId "zubayer.docsites"
         minSdkVersion 16
         targetSdkVersion 29
-        versionCode 69
-        versionName "6.5"
+        versionCode 70
+        versionName "6.6"
         multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

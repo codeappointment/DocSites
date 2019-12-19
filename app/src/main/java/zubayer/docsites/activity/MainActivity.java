@@ -2304,7 +2304,7 @@ public class MainActivity extends Activity {
                 break;
             case 7:
                 ccdNotices1();
-
+                Dialog.show();
                 break;
             case 8:
                 loadBMDCOptions();
