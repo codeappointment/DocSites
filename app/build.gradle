@@ -1,15 +1,16 @@
 apply plugin: 'com.android.application'
-apply plugin: 'io.fabric'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.0"
+    compileSdkVersion 30
+    buildToolsVersion "30.0.1"
     defaultConfig {
         applicationId "zubayer.docsites"
         minSdkVersion 16
-        targetSdkVersion 29
-        versionCode 70
-        versionName "6.6"
+        targetSdkVersion 30
+        versionCode 75
+        versionName "6.75"
         multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -19,6 +20,9 @@ android {
             minifyEnabled true
             useProguard false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            firebaseCrashlytics {
+                mappingFileUploadEnabled true
+            }
         }
     }
 }
@@ -26,19 +30,25 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     //noinspection GradleCompatible
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'com.google.android.material:material:1.0.0'
-    implementation 'com.google.firebase:firebase-database:19.0.0' // never update
-    implementation 'com.google.firebase:firebase-core:17.2.1'
-    implementation 'com.google.firebase:firebase-messaging:20.1.0'
-    implementation "androidx.work:work-runtime:2.2.0"
-    implementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
-    implementation 'com.google.firebase:firebase-storage:19.1.0'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test:runner:1.2.0'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-    implementation 'com.facebook.android:facebook-android-sdk:5.9.0'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    testImplementation 'junit:junit:4.13.1'
+    implementation 'androidx.vectordrawable:vectordrawable:1.1.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    androidTestImplementation 'androidx.test:runner:1.3.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation 'androidx.multidex:multidex:2.0.1'
+
+    implementation 'com.google.firebase:firebase-database:19.6.0' // never update
+    implementation 'com.google.firebase:firebase-core:18.0.1'
+    implementation 'com.google.firebase:firebase-messaging:21.0.1'
+    implementation "androidx.work:work-runtime:2.5.0"
+    implementation 'com.google.firebase:firebase-analytics:18.0.1'
+    implementation 'com.google.firebase:firebase-crashlytics:17.3.0'
+    implementation 'com.google.firebase:firebase-storage:19.2.1'
+
+    implementation 'com.facebook.android:facebook-android-sdk:5.9.0'
+
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation 'com.mcxiaoke.volley:library:1.0.19'
     implementation 'io.github.yavski:fab-speed-dial:1.0.6'
@@ -46,10 +56,11 @@ dependencies {
     implementation 'com.mikhaellopez:circularimageview:3.0.2'
     implementation 'com.github.bumptech.glide:glide:4.8.0'
     implementation 'androidx.cardview:cardview:1.0.0'
+    //noinspection GradleDependency
     implementation 'com.github.chrisbanes:PhotoView:2.1.4' //never update
-    implementation 'androidx.browser:browser:1.0.0'
+    //noinspection GradleDependency
+    implementation 'androidx.browser:browser:1.0.0' // never update
     implementation 'com.intuit.sdp:sdp-android:1.0.6'
-    implementation 'org.jsoup:jsoup:1.8.1'  // never update
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'org.jsoup:jsoup:1.13.1'  // never update
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
 }
-apply plugin: 'com.google.gms.google-services'

@@ -15,6 +15,7 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
@@ -262,7 +263,7 @@ public class MainActivity extends Activity {
     }
 
     private void startWorkManager() {
-        new Handler().postDelayed(new Runnable() {
+        new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
             @Override
             public void run() {
                 mWorkManager.enqueue(OneTimeWorkRequest.from(MyWorkManager.class));
@@ -1384,7 +1385,7 @@ public class MainActivity extends Activity {
         super.onResume();
         readNotificationCount();
         newForumPost();
-
+        adapter.notifyDataSetChanged();
     }
 
     @Override
@@ -1566,48 +1567,38 @@ public class MainActivity extends Activity {
     }
 
     private void resultBCS() {
-        bpscParser = new BpscParser();
-        paramUrl = "http://bpsc.gov.bd/site/view/psc_exam/BCS%20Examination/বিসিএস-পরীক্ষা";
-        paramTagForText = "tr";
-        paramTagForLink = "tr a";
-        paramLink = "abs:href";
-        textMin = 1;
-        bpscParser.execute();
-        progressBar.setVisibility(View.VISIBLE);
+        pdfFilter = "http://bpsc.gov.bd/site/view/psc_exam/BCS%20Examination/বিসিএস-পরীক্ষা";
+        browser(pdfFilter);
+    }
+
+    private void resultBCSOld() {
+        pdfFilter = "http://bpsc.gov.bd/site/view/psc_exam_archive/BCS%20Examination";
+        browser(pdfFilter);
     }
 
     private void resultDept() {
-        bpscParser = new BpscParser();
-        paramUrl = "http://www.bpsc.gov.bd/site/view/psc_exam/Departmental%20Examination/বিভাগীয়-পরীক্ষা";
-        paramTagForText = "tr";
-        paramTagForLink = "tr td a";
-        paramLink = "abs:href";
-        textMin = 1;
-        bpscParser.execute();
-        progressBar.setVisibility(View.VISIBLE);
+        pdfFilter = "http://www.bpsc.gov.bd/site/view/psc_exam/Departmental%20Examination/বিভাগীয়-পরীক্ষা";
+        browser(pdfFilter);
+    }
+
+    private void resultDeptOld() {
+        pdfFilter = "http://www.bpsc.gov.bd/site/view/psc_exam_archive/Departmental%20Examination";
+        browser(pdfFilter);
     }
 
     private void resultSenior() {
-        bpscParser = new BpscParser();
-        paramUrl = "http://www.bpsc.gov.bd/site/view/psc_exam/Senior%20Scale%20Examination/সিনিয়র-স্কেল-পরীক্ষা";
-        paramTagForText = "tr";
-        paramTagForLink = "tr td a";
-        paramLink = "abs:href";
-        textMin = 1;
-        bpscParser.execute();
-        progressBar.setVisibility(View.VISIBLE);
+        pdfFilter = "http://www.bpsc.gov.bd/site/view/psc_exam/Senior%20Scale%20Examination/সিনিয়র-স্কেল-পরীক্ষা";
+        browser(pdfFilter);
+    }
+
+    private void resultSeniorOld() {
+        pdfFilter = "http://www.bpsc.gov.bd/site/view/psc_exam_archive/Senior%20Scale%20Examination";
+        browser(pdfFilter);
     }
 
     private void bpscForms() {
-        back = new bsmmuParser();
-        paramUrl = "http://bpsc.gov.bd";
-        paramTagForText = "a";
-        paramTagForLink = "#box-5 a";
-        paramLink = "abs:href";
-        textMin = 80;
-        textMax = 84;
-        back.execute();
-        progressBar.setVisibility(View.VISIBLE);
+        pdfFilter = "http://bpsc.gov.bd";
+        browser(pdfFilter);
     }
 
     private void executeService() {
@@ -2126,39 +2117,47 @@ public class MainActivity extends Activity {
                         regiBCS();
                         break;
                     case 2:
-                        buttonTexts.clear();
                         resultBCS();
                         Dialog.show();
                         break;
                     case 3:
-                        buttonTexts.clear();
-                        bpscForms();
+                        resultBCSOld();
                         Dialog.show();
                         break;
                     case 4:
+                        bpscForms();
+                        Dialog.show();
+                        break;
+                    case 5:
                         buttonTexts.clear();
                         filterContent = getString(R.string.assistantSurgeon);
                         serviceConfirmGazette();
                         Dialog.show();
                         break;
-                    case 5:
+                    case 6:
                         buttonTexts.clear();
                         regiDept();
                         Dialog.show();
                         break;
-                    case 6:
-                        buttonTexts.clear();
+                    case 7:
                         resultDept();
                         Dialog.show();
                         break;
-                    case 7:
+                    case 8:
+                        resultDeptOld();
+                        Dialog.show();
+                        break;
+                    case 9:
                         buttonTexts.clear();
                         regiSenior();
                         Dialog.show();
                         break;
-                    case 8:
-                        buttonTexts.clear();
+                    case 10:
                         resultSenior();
+                        Dialog.show();
+                        break;
+                    case 11:
+                        resultSeniorOld();
                         Dialog.show();
                         break;
                 }
@@ -2452,6 +2451,5 @@ public class MainActivity extends Activity {
 
         pendingIntent = PendingIntent.getBroadcast(MainActivity.this, 0, newIntent, PendingIntent.FLAG_UPDATE_CURRENT);
         manager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_HALF_DAY, pendingIntent);
-
     }
 }

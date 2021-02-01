@@ -71,7 +71,7 @@
                         android:layout_marginStart="@dimen/_15sdp"
                         android:layout_marginTop="@dimen/_12sdp"
                         android:layout_toEndOf="@+id/reply_post_name"
-                        android:background="@mipmap/varified"
+                        android:background="@drawable/varified"
                         android:padding="@dimen/_2sdp"
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
                         android:textColor="#000099"
@@ -201,7 +201,7 @@
         android:layout_marginBottom="@dimen/_3sdp"
         android:layout_marginStart="@dimen/_10sdp"
         android:layout_toEndOf="@+id/reply_post_image"
-        android:background="@mipmap/image_chooser" />
+        android:background="@drawable/image_chooser" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/chooser_cardview"

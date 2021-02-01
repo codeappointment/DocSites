@@ -43,7 +43,6 @@ public class GridAdapter extends ArrayAdapter<String> {
         if(convertView==null) {
             LayoutInflater inflater = context.getLayoutInflater();
             convertView = inflater.inflate(R.layout.recycer_grid, null, true);
-            notifyDataSetChanged();
         }
         TextView title=convertView.findViewById(R.id.bsmmu1);
         TextView elaborate=convertView.findViewById(R.id.bsmmu2);

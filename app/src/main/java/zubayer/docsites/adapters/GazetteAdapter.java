@@ -38,7 +38,6 @@ public class GazetteAdapter extends ArrayAdapter<String> {
         if(convertView==null) {
             LayoutInflater inflater = context.getLayoutInflater();
             convertView = inflater.inflate(R.layout.gadgette_layout, null, true);
-            notifyDataSetChanged();
         }
         TextView myTitle =  convertView.findViewById(R.id.idTitle);
         myTitle.setTypeface(font);

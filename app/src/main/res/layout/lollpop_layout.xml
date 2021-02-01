@@ -49,7 +49,7 @@
                 android:layout_marginStart="@dimen/_15sdp"
                 android:layout_marginTop="@dimen/_12sdp"
                 android:layout_toEndOf="@+id/user_name"
-                android:background="@mipmap/varified"
+                android:background="@drawable/varified"
                 android:padding="@dimen/_2sdp"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
                 android:textColor="#000099"

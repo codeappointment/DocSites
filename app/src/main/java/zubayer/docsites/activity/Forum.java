@@ -11,6 +11,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.os.Parcelable;
 import android.view.Gravity;
 import android.view.MenuItem;
@@ -155,7 +156,7 @@ public class Forum extends Activity {
                     if (isScrolling) {
                         isScrolling = false;
                         progressBar.setVisibility(View.VISIBLE);
-                        new Handler().postDelayed(new Runnable() {
+                        new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
                             @Override
                             public void run() {
                                 if (openNotification == null)
@@ -493,7 +494,9 @@ public class Forum extends Activity {
                     forum_subscription.setVisibility(View.GONE);
                     for (int i = 0; i < notificationID.size(); i++) {
                         if (notificationExpiry(notificationID.get(i)) > 1000 * 60 * 60 * 24 * 7) {
-                            notificationReference.child(facebook_id).child(notificationID.get(i)).setValue(null);
+                            notificationReference.child(facebook_id)
+                                    .child(notificationID.get(i))
+                                    .setValue(null);
                         }
 
                     }

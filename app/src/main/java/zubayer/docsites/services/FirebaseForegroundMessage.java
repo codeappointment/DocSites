@@ -36,6 +36,12 @@ public class FirebaseForegroundMessage extends FirebaseMessagingService {
     HashMap<String,String> dataPlayLoad=new HashMap<>();
     String imageUrl;
     private Bitmap bitmap;
+
+    @Override
+    public void onNewToken(@NonNull String s) {
+        super.onNewToken(s);
+    }
+
     @Override
     public void onMessageReceived(@NonNull RemoteMessage remoteMessage) {
         Log.d(TAG, "From: " + remoteMessage.getFrom());

@@ -17,12 +17,13 @@
         android:allowBackup="true"
         android:fullBackupContent="true"
         android:hardwareAccelerated="true"
-        android:icon="@mipmap/ic_launcher_foreground"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_foreground"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
-        tools:targetApi="m">
+        tools:targetApi="m"
+        tools:ignore="LockedOrientationActivity">
         <activity android:name=".activity.FacebookLogIn"
             android:screenOrientation="portrait" />
         <activity
@@ -162,12 +163,16 @@
             android:name=".activity.GazetteActivity"
             android:screenOrientation="portrait" />
 
-        <service android:name=".services.FirebaseForegroundMessage">
+        <service
+            android:name=".services.FirebaseForegroundMessage"
+            android:enabled="true"
+            android:exported="true"
+            tools:ignore="ExportedService">
             <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_color"
             android:resource="@color/colorPrimaryDark" />

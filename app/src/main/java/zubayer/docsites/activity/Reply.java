@@ -674,7 +674,7 @@ public class Reply extends Activity {
             obj.put("to", to);
             obj.put("priority", "high");
             obj.put("data", dataobjData);
-            Log.e("return here>>", obj.toString());
+
         } catch (JSONException e) {
             e.printStackTrace();
         }

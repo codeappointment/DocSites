@@ -78,12 +78,15 @@
         <item>@string/homePage</item>
         <item>@string/bcsOnline</item>
         <item>@string/bcsResult</item>
+        <item>@string/bcsResultOld</item>
         <item>@string/forms</item>
         <item>@string/assistantSurgeonOption</item>
         <item>@string/departmentalOnline</item>
         <item>@string/departmentalResult</item>
+        <item>@string/departmentalOldResult</item>
         <item>@string/seniorOnline</item>
         <item>@string/seniorResult</item>
+        <item>@string/seniorOldResult</item>
 
     </array>
     <array name="bmdcOptions">
@@ -113,4 +116,7 @@
         <item>@string/dgfpnoc</item>
     </array>
     <string name="registration_forms">Registration forms</string>
+    <string name="departmentalOldResult">বিভাগীয় পরীক্ষার নোটিশ ও ফলাফল (পুরাতন)</string>
+    <string name="seniorOldResult">সিনিয়র স্কেল পরীক্ষার নোটিশ ও ফলাফল (পুরাতন)</string>
+    <string name="bcsResultOld">বিসিএস পরীক্ষার নোটিশ ও ফলাফল (পুরাতন)</string>
 </resources>

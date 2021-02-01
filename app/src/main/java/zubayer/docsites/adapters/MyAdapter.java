@@ -1,5 +1,6 @@
 package zubayer.docsites.adapters;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.ClipData;
 import android.content.ClipboardManager;
@@ -42,19 +43,19 @@ public class MyAdapter extends ArrayAdapter<String> {
         font = Typeface.createFromAsset(context.getAssets(), "kalpurush.ttf");
     }
 
+    @SuppressLint("InflateParams")
     @NonNull
     @Override
     public View getView(final int position, View convertView, @NonNull ViewGroup parent) {
         if (convertView == null) {
             LayoutInflater inflater = context.getLayoutInflater();
             convertView = inflater.inflate(R.layout.customlyst, null, true);
-            notifyDataSetChanged();
         }
-        TextView myTitle = (TextView) convertView.findViewById(R.id.idTitle);
+        TextView myTitle =  convertView.findViewById(R.id.idTitle);
         myTitle.setTypeface(font);
         myTitle.setText(Html.fromHtml(titleArray.get(position)), TextView.BufferType.SPANNABLE);
-        TextView image = (TextView) convertView.findViewById(R.id.ImageView);
-        TextView copy = (TextView) convertView.findViewById(R.id.copy);
+        TextView image =  convertView.findViewById(R.id.ImageView);
+        TextView copy =  convertView.findViewById(R.id.copy);
         try {
             image.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
