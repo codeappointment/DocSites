@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--button heading-->
+    <string name="hbsmmu">BSMMU</string>
+    <string name="hbmdc">BMDC</string>
+    <string name="hbcps">BCPS</string>
+    <string name="hdghs">DGHS</string>
+    <string name="hmohf">MOHFW</string>
+    <string name="hbpsc">BPSC</string>
+    <string name="hgazettes">Gazette</string>
+    <string name="hresult">MBBS/BDS</string>
+    <string name="hdgfp">DGFP</string>
+    <string name="hccd">CCD</string>
+
+    <!--button description স্বাস্থ্য ও পরিবার পরিকল্পনা\nমন্ত্রণালয়-->
+
+    <string name="bsmmu">বঙ্গবন্ধু শেখ মুজিব মেডিকেল\nবিশ্ববিদ্যালয়</string>
+    <string name="mohf">পদোন্নতি,পদায়ন,ডেপুটেশন\nএডহক নিয়মিতকরণ</string>
+    <string name="bpsc">বাংলাদেশ সরকারি কর্ম \nকমিশন</string>
+    <string name="gazettes">বাংলাদেশ সরকারি মুদ্রণালয়\n(বি.জি.প্রেস)</string>
+    <string name="dghs">স্বাস্থ্য অধিদপ্তর\n</string>
+    <string name="result">মেডিকেল ও ডেন্টাল\nভর্তি পরীক্ষার ফলাফল</string>
+    <string name="bcps">Bangladesh College of\nPhysicians and Surgeons</string>
+    <string name="bmdc">Bangladesh Medical and\nDental Council</string>
+    <string name="dgpf">পরিবার পরিকল্পনা অধিদপ্তর\n</string>
+    <string name="ccd">Certificate Course\non Diabetology</string>
+
+    <string name="homePage">Home page</string>
+
+    <!--buttonHints-->
+    <string name="bsmmuHints">Residency, non-Residency,\nNotice</string>
+    <string name="bcpsHints">Guidelines, pdf forms\nFCPS, MCPS Results</string>
+    <string name="dghsHints">বদলি/পদায়ন, HRM,\nবুনিয়াদি প্রশিক্ষণ</string>
+    <string name="mohfwHints">ডেপুটেশন নীতিমালা ২০১৩\nবিভিন্ন কোর্সে আসন সংখ্যা</string>
+    <string name="bpscHints">BCS, Departmental exam,\nSenior Scale Exam</string>
+    <string name="gazetteHints">সিনিয়র স্কেল, ডিপার্টমেন্টাল,\nচাকুরি স্থায়ীকরণ</string>
+    <string name="bmdcHints">Find Registered Doctor\nRegistration/renewal forms</string>
+    <string name="resultsHints"> </string>
+    <string name="dgfpHints">অফিস আদেশ, নোটিশ\nএনওসি</string>
+    <string name="ccdHints">Admission, Exam and\nother Notices</string>
+
+    <array name="heading">
+        <item>@string/hbsmmu</item>
+        <item>@string/hbcps</item>
+        <item>@string/hdghs</item>
+        <item>@string/hmohf</item>
+        <item>@string/hbpsc</item>
+        <item>@string/hgazettes</item>
+        <item>@string/hdgfp</item>
+        <item>@string/hccd</item>
+        <item>@string/hbmdc</item>
+        <item>@string/hresult</item>
+    </array>
+    <array name="description">
+        <item>@string/bsmmu</item>
+        <item>@string/bcps</item>
+        <item>@string/dghs</item>
+        <item>@string/mohf</item>
+        <item>@string/bpsc</item>
+        <item>@string/gazettes</item>
+        <item>@string/dgpf</item>
+        <item>@string/ccd</item>
+        <item>@string/bmdc</item>
+        <item>@string/result</item>
+    </array>
+    <array name="hints">
+        <item>@string/bsmmuHints</item>
+        <item>@string/bcpsHints</item>
+        <item>@string/dghsHints</item>
+        <item>@string/mohfwHints</item>
+        <item>@string/bpscHints</item>
+        <item>@string/gazetteHints</item>
+        <item>@string/dgfpHints</item>
+        <item>@string/ccdHints</item>
+        <item>@string/bmdcHints</item>
+        <item>@string/resultsHints</item>
+    </array>
+
+
+<!--    &lt;!&ndash;buttons&ndash;&gt;-->
+<!--    <array name="bsmmuOptions">-->
+<!--        <item>@string/homePage</item>-->
+<!--        <item>@string/residency</item>-->
+<!--        <item>@string/admissionEreregi</item>-->
+<!--        <item>@string/academic_notice</item>-->
+<!--        <item>@string/administrative_notice</item>-->
+<!--        <item>@string/courseName_and_duratin</item>-->
+<!--        <item>@string/affiliated_institution</item>-->
+<!--    </array>-->
+<!--    <array name="bcpsOptions">-->
+<!--        <item>@string/homePage</item>-->
+<!--        <item>@string/onlineNotic</item>-->
+<!--        <item>@string/courseFee</item>-->
+<!--        <item>@string/rollResultFCPS</item>-->
+<!--        <item>@string/refundExamFees</item>-->
+
+<!--    </array>-->
+<!--    <array name="dghsOptions">-->
+<!--        <item>@string/homePage</item>-->
+<!--        <item>@string/homePageNotice</item>-->
+<!--        <item>@string/posting</item>-->
+<!--        <item>@string/hrm</item>-->
+<!--    </array>-->
+<!--    <array name="mohfwOptions">-->
+<!--        <item>@string/homePage</item>-->
+<!--        <item>@string/deputation</item>-->
+<!--        <item>@string/deputationOrders</item>-->
+<!--        <item>@string/assistantSurgeonOption</item>-->
+<!--        <item>@string/juniorConsultantOption</item>-->
+<!--        <item>@string/seniorConsultantOption</item>-->
+<!--        <item>@string/assistantProfessorOption</item>-->
+<!--        <item>@string/associateProfessorOption</item>-->
+<!--        <item>@string/professorOption</item>-->
+<!--        <item>@string/civilSurgeonOption</item>-->
+<!--        <item>@string/adhokOpion</item>-->
+<!--        <item>@string/leaveOpion</item>-->
+<!--    </array>-->
+<!--    <array name="bpscOptions">-->
+<!--        <item>@string/homePage</item>-->
+<!--        <item>@string/bcsOnline</item>-->
+<!--        <item>@string/bcsResult</item>-->
+<!--        <item>@string/bcsResultOld</item>-->
+<!--        <item>@string/forms</item>-->
+<!--        <item>@string/assistantSurgeonOption</item>-->
+<!--        <item>@string/departmentalOnline</item>-->
+<!--        <item>@string/departmentalResult</item>-->
+<!--        <item>@string/departmentalOldResult</item>-->
+<!--        <item>@string/seniorOnline</item>-->
+<!--        <item>@string/seniorResult</item>-->
+<!--        <item>@string/seniorOldResult</item>-->
+
+<!--    </array>-->
+<!--    <array name="bmdcOptions">-->
+<!--        <item>@string/homePage</item>-->
+<!--        <item>@string/findDoctor</item>-->
+<!--        <item>@string/bmdcDownloadbleForms</item>-->
+<!--        <item>@string/registration_forms</item>-->
+<!--    </array>-->
+<!--    <array name="resultsOption">-->
+<!--        <item>@string/mbbs</item>-->
+<!--        <item>@string/bds</item>-->
+<!--    </array>-->
+<!--    <array name="gazetteOptions">-->
+<!--        <item>@string/seniorScaleOption</item>-->
+<!--        <item>@string/departmentalOption</item>-->
+<!--        <item>@string/serviceConfirmOption</item>-->
+<!--        <item>@string/weeklyGazette</item>-->
+<!--    </array>-->
+<!--    <array name="bpscFormsOptions">-->
+<!--        <item>@string/seniorScaleOption</item>-->
+<!--        <item>@string/serviceConfirmOption</item>-->
+<!--    </array>-->
+<!--    <array name="dgfpOptions">-->
+<!--        <item>@string/homePage</item>-->
+<!--        <item>@string/dgfporder</item>-->
+<!--        <item>@string/dgfpnotice</item>-->
+<!--        <item>@string/dgfpnoc</item>-->
+<!--    </array>-->
+    <string name="registration_forms">Registration forms</string>
+    <string name="departmentalOldResult">বিভাগীয় পরীক্ষার নোটিশ ও ফলাফল (পুরাতন)</string>
+    <string name="seniorOldResult">সিনিয়র স্কেল পরীক্ষার নোটিশ ও ফলাফল (পুরাতন)</string>
+    <string name="bcsResultOld">বিসিএস পরীক্ষার নোটিশ ও ফলাফল (পুরাতন)</string>
+
+</resources>
