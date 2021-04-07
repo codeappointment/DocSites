@@ -9,8 +9,9 @@ import zubayer.docsites.R
 import zubayer.docsites.databinding.HomeItemBinding
 import zubayer.docsites.model.HomeAdapterData
 import zubayer.docsites.util.Helper
+import zubayer.docsites.util.HomeAdapterClickListener
 
-class HomeAdapter(val homeAdapterData: HomeAdapterData) :
+class HomeAdapter(val homeAdapterData: HomeAdapterData, val homeAdapterClickListener: HomeAdapterClickListener) :
     RecyclerView.Adapter<HomeAdapter.HomeViewHolder>() {
 
 
@@ -40,9 +41,16 @@ class HomeAdapter(val homeAdapterData: HomeAdapterData) :
     inner class HomeViewHolder(val homeView: View) : RecyclerView.ViewHolder(homeView) {
         val binding = HomeItemBinding.bind(homeView)
         val context = homeView.context
+        var title = "BSMMU"
 
+        init {
+            itemView.setOnClickListener {
+                homeAdapterClickListener.onClick(context, title)
+            }
+        }
 
         fun setUpView(titleText: String, headerText: String, subHeaderText: String) {
+            title = titleText
             binding.title.text = titleText
             binding.header.text = headerText
             binding.subHeader.text = subHeaderText
